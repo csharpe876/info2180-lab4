@@ -128,9 +128,10 @@ h1 {
     font-size: 15px;
 }
 
-.not-found {
+#result .not-found {
     color: #c8302b;
     font-weight: bold;
     padding: 20px 0;
     font-size: 16px;
+    text-transform: uppercase;
 }
