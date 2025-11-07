@@ -10,10 +10,15 @@
     <div class="container">
         <h1>Avengers Character Search</h1>
         <div class="search-container">
-            <input type="text" id="searchField" placeholder="Enter superhero name or alias...">
-            <button id="searchBtn">Search</button>
+            <label for="searchField">Search by Full Name or Alias</label>
+            <div class="search-box">
+                <input type="text" id="searchField" placeholder="e.g. Captain America or Steve Rogers">
+                <button id="searchBtn">Search</button>
+            </div>
         </div>
-        <div id="result"></div>
+        <div id="result">
+            <h2>Result</h2>
+        </div>
     </div>
     <script src="javascript/app.js"></script>
 </body>
