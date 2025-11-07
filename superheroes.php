@@ -63,6 +63,32 @@ $superheroes = [
   ], 
 ];
 
+// Check if this is an AJAX request
+if (isset($_GET['query'])) {
+    // Set content type to JSON
+    header('Content-Type: application/json');
+    
+    $query = trim($_GET['query']);
+    $results = [];
+    
+    if (empty($query)) {
+        // If query is empty, return all superheroes
+        $results = $superheroes;
+    } else {
+        // Search for superheroes matching the query
+        foreach ($superheroes as $superhero) {
+            if (stripos($superhero['name'], $query) !== false || 
+                stripos($superhero['alias'], $query) !== false) {
+                $results[] = $superhero;
+            }
+        }
+    }
+    
+    // Return JSON response
+    echo json_encode($results);
+    exit;
+}
+
 ?>
 
 <ul>
