@@ -3,27 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superhero Finder</title>
+    <title>Avengers Character Search</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 <body>
-    <header>
-        <h1>SUPERHERO FINDER</h1>
-    </header>
-    
-    <main>
+    <div class="container">
+        <h1>Avengers Character Search</h1>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="e.g. Captain America or Steve Rogers">
-            <button type="button" id="searchBtn">Search</button>
+            <input type="text" id="searchField" placeholder="Enter superhero name or alias...">
+            <button id="searchBtn">Search</button>
         </div>
-        
-        <hr>
-        
-        <div id="result">
-            <!-- Search results will be displayed here -->
-        </div>
-    </main>
-    
+        <div id="result"></div>
+    </div>
     <script src="javascript/app.js"></script>
 </body>
 </html>
